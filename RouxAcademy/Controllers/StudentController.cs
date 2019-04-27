@@ -25,7 +25,11 @@ namespace RouxAcademy.Controllers
         /// <returns> Index Page With throwing new list of Cource Grade model </returns>
         public IActionResult Index()
         {
-            return View(new List<UniGrad>());
+            var userName = User.Identity.Name;
+            var grades = _context.uniGrads.Where(g =>
+           g.StudentUsername == userName).ToList();
+
+            return View(grades);
         }
 
         #region Add Grade
@@ -34,6 +38,7 @@ namespace RouxAcademy.Controllers
         /// Get Add Grade View 
         /// </summary>
         /// <returns></returns>
+        //[Authorize(Policy ="FacultyOnly")]
         [HttpGet]
         public IActionResult AddGrade()
         {
@@ -45,6 +50,7 @@ namespace RouxAcademy.Controllers
         /// </summary>
         /// <param name="model"></param>
         /// <returns> return model and add it to database </returns>
+        //[Authorize(Policy ="FacultyOnly")]
         [HttpPost]
         public async Task<IActionResult> AddGrade(UniGrad model)
         {

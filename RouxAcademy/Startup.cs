@@ -46,7 +46,16 @@ namespace RouxAcademy
                 .AddEntityFrameworkStores<StudentDataContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            // Adding Authorization Policy and options
+            //services.AddAuthorization(opt =>
+            //{
+            //    opt.AddPolicy("FacultyOnly",
+            //        policy =>
+            //        policy.RequireClaim("FacultyNumber"));
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

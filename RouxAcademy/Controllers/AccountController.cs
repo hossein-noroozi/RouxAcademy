@@ -14,6 +14,8 @@ namespace RouxAcademy.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly StudentDataContext _context;
         private readonly SignInManager<IdentityUser> _signInManager;
+        
+
         public AccountController(UserManager<IdentityUser> userManager
             , StudentDataContext context
             , SignInManager<IdentityUser> signInManager)
@@ -48,10 +50,18 @@ namespace RouxAcademy.Controllers
                 };
 
                 var result = await _userManager.CreateAsync(user, model.Password);
-                //await _context.SaveChangesAsync();
+                
+                    //if (!string.IsNullOrEmpty(model.FacultyNumber))
+                    //{
+                    //    await _userManager.AddClaimAsync
+                    //        (user,
+                    //        new System.Security.Claims.Claim("FacultyNumber", model.FacultyNumber));
+
+                    //}
 
                 if (result.Succeeded)
                 {
+                    
                     return RedirectToAction("Login", "Account");
                 }
                 else
@@ -101,7 +111,7 @@ namespace RouxAcademy.Controllers
                     //    return RedirectToAction(nameof(StudentController.Index), "Student");
                     //}
                     return RedirectToAction(nameof(StudentController.Index), "Student");
-                 }
+                }
                 else
                 {
                     ModelState.AddModelError(string.Empty,
@@ -129,6 +139,11 @@ namespace RouxAcademy.Controllers
 
         #endregion
 
+
+        /// <summary>
+        /// Access denied
+        /// </summary>
+        /// <returns></returns>
         #region Access Denied
 
         [HttpGet]

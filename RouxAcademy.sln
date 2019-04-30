@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouxAcademy", "RouxAcademy\RouxAcademy.csproj", "{DE04AE26-5CE5-4BED-AE77-3C4E06D571AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouxAcademy", "RouxAcademy\RouxAcademy.csproj", "{DE04AE26-5CE5-4BED-AE77-3C4E06D571AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouxAcademy.Tokenservice", "RouxAcademy.Tokenservice\RouxAcademy.Tokenservice.csproj", "{4E488198-EE9D-4A2C-B1DF-6804DBFC5D59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DE04AE26-5CE5-4BED-AE77-3C4E06D571AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE04AE26-5CE5-4BED-AE77-3C4E06D571AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE04AE26-5CE5-4BED-AE77-3C4E06D571AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E488198-EE9D-4A2C-B1DF-6804DBFC5D59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E488198-EE9D-4A2C-B1DF-6804DBFC5D59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E488198-EE9D-4A2C-B1DF-6804DBFC5D59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E488198-EE9D-4A2C-B1DF-6804DBFC5D59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
